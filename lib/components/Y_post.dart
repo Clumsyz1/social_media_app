@@ -126,6 +126,7 @@ class _YPostState extends State<YPost> {
           ),
           TextButton(
             onPressed: () async {
+              Navigator.pop(context);
               final commentdocs = await FirebaseFirestore.instance
                   .collection("User post")
                   .doc(widget.postID)
